@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HACKRONIX Chat</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="login-screen" class="screen active">
+    <div class="login-container">
+      <div class="logo">
+        <div class="hexagon">
+          <span>H</span>
+        </div>
+        <h1>HACKRONIX Chat</h1>
+        <p>Connect. Chat. Collaborate.</p>
+      </div>
+      
+      <div class="login-form">
+        <input type="text" id="username-input" placeholder="Enter your username" maxlength="20"/>
+        <button id="connect-btn">
+          CONNECT <i class="fas fa-arrow-right"></i>
+        </button>
+        <p class="note">✓ No signup needed. Just enter a username.</p>
+      </div>
+      
+      <p class="footer">© 2024 HACKRONIX Chat. All rights reserved.</p>
+    </div>
+  </div>
 
+  <!-- Active Users Screen -->
+  <div id="users-screen" class="screen">
+    <div class="top-bar">
+      <div class="logo">
+        <div class="hexagon"><span>H</span></div>
+        <span>HACKRONIX Chat</span>
+      </div>
+      
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" id="search-users" placeholder="Search users..."/>
+      </div>
+      
+      <div class="current-user">
+        <div class="avatar">
+          <i class="fas fa-user"></i>
+        </div>
+        <span id="current-username">User</span>
+        <div class="status-dot online"></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="sidebar">
+        <div class="nav-item active">
+          <i class="fas fa-users"></i>
+          <span>Active Users</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-comments"></i>
+          <span>Chats</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-globe"></i>
+          <span>Explore</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-users-cog"></i>
+          <span>Groups</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </div>
+        <div class="nav-item logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </div>
+      </div>
+
+      <div class="main-panel">
+        <div class="panel-header">
+          <h2>Active Users</h2>
+          <span class="online-count"><i class="fas fa-circle"></i> <span id="online-count">0</span> Online</span>
+        </div>
+
+        <div id="users-list" class="users-grid">
+          <!-- Users will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Screen -->
+  <div id="chat-screen" class="screen">
+    <div class="chat-header">
+      <button id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+      <div class="chat-info">
+        <div class="avatar">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="info">
+          <h3 id="chat-with">User</h3>
+          <span class="status">Online</span>
+        </div>
+      </div>
+      <div class="chat-actions">
+        <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+      </div>
+    </div>
+
+    <div id="messages-container" class="messages-container">
+      <!-- Messages will appear here -->

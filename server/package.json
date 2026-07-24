@@ -1,0 +1,27 @@
+{
+  "name": "hackronix-chat",
+  "version": "1.0.0",
+  "description": "A secure real-time chat application with file sharing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^1^.18.2",
+    "socket.io": "^1^.7.2",
+    "path": ".12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2^.0.1"
+  },
+  "keywords": [
+    "chat",
+    "real-time",
+    "socket.io",
+    "file-sharing",
+    "hackronix"
+  ],
+  "author": "Hackronix Team",
+  "license": "MIT"
+}

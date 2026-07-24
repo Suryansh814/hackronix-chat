@@ -111,6 +111,44 @@
         <button class="action-btn"><i class="fas fa-info-circle"></i></button>
       </div>
     </div>
+    </div>
+
+    <div class="chat-input-container">
+      <div class="input-actions">
+        <button id="attach-file" class="action-btn"><i class="fas fa-paperclip"></i></button>
+        <button id="send-image" class="action-btn"><i class="fas fa-image"></i></button>
+        <button id="emoji-btn" class="action-btn"><i class="fas fa-smile"></i></button>
+      </div>
+      
+      <div class="input-field">
+        <textarea id="message-input" placeholder="Type your message..."></textarea>
+        <button id="send-message" class="action-btn"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- File Input (Hidden) -->
+  <input type="file" id="file-input" style="display: none;" accept="*/*">
+  
+  <!-- Emoji Picker -->
+  <div id="emoji-picker" class="emoji-picker">
+    <div class="emoji-header">
+      <span>Choose Emoji</span>
+      <button id="close-emoji"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="emoji-body">
+      <!-- Emojis will be populated here -->
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
 
     <div id="messages-container" class="messages-container">
       <!-- Messages will appear here -->
